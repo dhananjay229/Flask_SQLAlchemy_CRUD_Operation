@@ -30,11 +30,6 @@ def hello_world():
     allRecord = Record.query.all()    
     return render_template('index.html', allRecord=allRecord)
  
-@app.route("/show")
-def products():
-    allrecord = Record.query.all()
-    print(allrecord)
-    return "<p>dhananjay.vercel.app</p>"
 
 @app.route("/update/<int:no>",methods=['GET','POST'])
 def update(no):
